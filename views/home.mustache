@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ethan Jarrell</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+    <script>
+    $( window ).load(function() {
+
+      setInterval(function(){
+
+        let element1 = site1.getBoundingClientRect();
+
+        let element2 = site2.getBoundingClientRect();
+
+        let element3 = site3.getBoundingClientRect();
+
+        let element4 = site4.getBoundingClientRect();
+
+        let element5 = site5.getBoundingClientRect();
+
+        let element6 = site6.getBoundingClientRect();
+
+        let element7 = site7.getBoundingClientRect();
+
+
+
+      let polygon1 = `
+      <svg class="polygonContainer" >
+<polygon points="${element1.x},${element7.y} ${element2.x},${element6.y} ${element3.x},${element5.y} ${element1.x},${element4.y} ${element2.x},${element5.y} ${element3.x},${element6.y} ${element4.x},${element7.y}" class="white"  id="c"/>
+
+
+      <polygon points="${element7.x},${element7.y+10} ${element1.x},${element1.y+10} ${element4.x},${element4.y+10} ${element5.x},${element5.y+10} ${element6.x},${element6.y+10} ${element3.x},${element3.y+10} ${element1.x},${element1.y+10}" class="white2"  id="d"/>
+
+
+            <polygon points="${element3.x},${element1.y+20} ${element3.x},${element4.y+20} ${element7.x},${element2.y+20} ${element3.x},${element6.y+20} ${element4.x},${element5.y+20} ${element4.x},${element1.y+20} ${element2.x},${element5.y+20}" class="white3"  id="e"/>
+                  </svg>
+      `
+      document.getElementById('polygon').innerHTML = polygon1;
+    }, 20);
+
+
+
+    })
+    </script>
+    <script>
+    $(document).ready(function() {
+      console.log("talking");
+
+      let button1 = document.getElementById('site1');
+      let button2 = document.getElementById('site2');
+      let button3 = document.getElementById('site3');
+      let button4 = document.getElementById('site4');
+      let button5 = document.getElementById('site5');
+      let button6 = document.getElementById('site6');
+      let button7 = document.getElementById('site7');
+      button1.onclick = searchAPI;
+      button2.onclick = searchAPI;
+      button3.onclick = searchAPI;
+      button4.onclick = searchAPI;
+      button5.onclick = searchAPI;
+      button6.onclick = searchAPI;
+      button7.onclick = searchAPI;
+
+      function searchAPI() {
+        $("div").click(function(e){
+          var idClicked = e.target.id;
+
+
+
+    fetch('https://api.mlab.com/api/1/databases/portfoliosite/collections/sites?&l=41000&apiKey=_ehmfqV-bs1PDWki2WNFVMsGmXGQuk77').then(function(response) {
+      if (response.status != 2000) {
+        window.alert("Sorry, nothing matches those search terms.  Try another search, or use the panel on the left.");
+        return;
+      }
+
+      response.json().then(function(data) {
+
+        let api = data;
+        let dataToUse = [];
+        for (var i = 0; i < api.length; i++) {
+          if (idClicked == site1) {
+
+          }
+          if (idClicked == site2) {
+
+          }
+          if (idClicked == site3) {
+
+          }
+          if (idClicked == site4) {
+
+          }
+          if (idClicked == site5) {
+
+          }
+          if (idClicked == site6) {
+
+          }
+          if (idClicked == site7){
+
+          }
+        }
+
+      })
+    })
+    });
+  }
+})
+</script>
+  </head>
+  <body>
+
+    <div class="aboutMe">
+      <h2>Hi.  I'm Ethan Jarrell</h2>
+      <h5>ethan.jarrell@gmail.com</h5>
+      <h4>I enjoy web development</h4>
+      <h4>Here on some of the sites I've worked on.</h4>
+      <h4>Click on one for more information.</h4>
+
+    </div>
+<div class="linkContainer">
+    <a href="/portfolioB">
+      <div id="site1" value="Donald Trump Site" class="site1 active">
+      </div>
+    </a>
+    <a href="/portfolioF">
+      <div id="site2" value="Simple Piano" class="site2">
+      </div>
+    </a>
+    <a href="/portfolioE">
+      <div id="site3" value="Weather App" class="site3">
+      </div>
+    </a>
+    <a href="/portfolioA">
+      <div id="site4" value="Search & Play Music" class="site4">
+      </div>
+    </a>
+    <a href="/portfolioD">
+      <div id="site5" value="Presentation Maker" class="site5">
+      </div>
+    </a>
+    <a href="/portfolioG">
+      <div id="site6" value="DrayNori" class="site6">
+      </div>
+    </a>
+    <a href="/portfolioC">
+      <div id="site7" value="Form Tests" class="site7">
+      </div>
+    </a>
+  </div>
+
+    <div class="polygonContainer">
+    <div id="polygon"></div>
+  </div>
+  </body>
+</html>

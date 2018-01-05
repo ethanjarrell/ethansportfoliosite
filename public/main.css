@@ -1,0 +1,637 @@
+.aboutMe {
+  position: fixed;
+  z-index: 15;
+  top: 10px;
+  right: 30px;
+  text-align: right;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+.display {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.linkContainer {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.aboutMe h2 {
+  background-color: #a9bcd6;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  padding-right: 40px;
+  margin-right: -40px;
+}
+
+.aboutMe h4 {
+  color: #8b9aaf;
+  font-weight: bold;
+}
+
+.aboutMe h5 {
+  color: #8b9aaf;
+  font-weight: bold;
+}
+
+div#polygon {
+  width: 100vw;
+  background-color: transparent;
+}
+
+svg.polygonContainer {
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background-color: transparent;
+  margin-top:-100%;
+}
+
+polygon#c.white {
+  width: 100vw;
+  height: 100vh;
+  stroke:black;
+  stroke-width:1;
+  fill: transparent;
+  overflow: visible;
+  background-color: transparent;
+}
+
+polygon#d.white2 {
+  width: 100vw;
+  height: 100vh;
+  stroke:lightgray;
+  stroke-width:3;
+  fill: transparent;
+  overflow: visible;
+  background-color: transparent;
+}
+
+polygon#e.white3 {
+  width: 100vw;
+  height: 100vh;
+  stroke:gray;
+  stroke-width:2;
+  fill: transparent;
+  overflow: visible;
+  background-color: transparent;
+}
+
+div#site1.site1 {
+  z-index: 2;
+  position: static;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+height: 10%;
+display: flex;
+align-items: center;
+-webkit-animation: xAxis1 80.5s infinite cubic-bezier(40.9, 0.9, 20.1, 50.0);
+animation: yAxis1 70.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+-webkit-animation: yAxis1 50.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+animation: xAxis1 80.5s infinite cubic-bezier(.002, 0.004, 0.1, 0.1);
+}
+
+
+
+div#site1.site1::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: xAxis1 80.5s infinite cubic-bezier(40.9, 0.9, 20.1, 50.0);
+  animation: xAxis1 80.5s infinite cubic-bezier(.002, 0.004, 0.1, 0.1);
+  animation: yAxis1 70.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+  -webkit-animation: yAxis1 50.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+}
+
+div#site1.site1:hover::after {
+  background-image:url('trump.png');
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site1.site1:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis1 {
+  50% {
+    z-index: 2;
+    -webkit-animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    -webkit-transform: translateY(80vh);
+    transform: translateY(80vh);
+  }
+}
+@-webkit-keyframes xAxis1 {
+  50% {
+    z-index: 2;
+    -webkit-animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site2.site2 {
+  position: static;
+  z-index: 3;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  -webkit-animation: yAxis2 50.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+  -webkit-animation: xAxis2 65.5s infinite cubic-bezier(8.91, 1.4, 5.05, 2.3);
+  animation: yAxis2 70.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+  animation: xAxis2 65.5s infinite cubic-bezier(0.01, 0.01, 0.3, 0.08);
+}
+
+div#site2.site2::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis2 50.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+animation: yAxis2 70.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+}
+
+div#site2.site2:hover::after {
+  background-image:url('piano.png');
+  z-index: 3;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site2.site2:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis2 {
+  50% {
+    z-index: 3;
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0.1, 0.01, 0.5);
+    animation-timing-function: cubic-bezier(0.5, 0.1, 0.01, 0.5);
+    -webkit-transform: translateY(70vh);
+    transform: translateY(70vh);
+  }
+}
+@-webkit-keyframes xAxis2 {
+  50% {
+    z-index: 3;
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 0.01);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site3.site3 {
+  position: static;
+  z-index: 4;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  -webkit-animation: yAxis3 50.5s infinite cubic-bezier(40.7, 0.27, 10.57, 50.64);
+  -webkit-animation: xAxis3 30.5s infinite cubic-bezier(8.91, 1.4, 5.05, 2.3);
+  animation: yAxis3 40.5s infinite cubic-bezier(1.7, 0.27, 0.57, 0.1);
+  animation: xAxis3 35.5s infinite cubic-bezier(0.01, 0.01, 0.3, 0.08);
+}
+
+div#site3.site3::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 4;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis3 60.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.64);
+  animation: yAxis3 20.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+}
+
+div#site3.site3:hover::after {
+  background-image:url('weather.png');
+  z-index: 4;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site3.site3:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis3 {
+  50% {
+    z-index: 4;
+    -webkit-animation-timing-function: cubic-bezier(1.5, 0.1, 10.01, 0.5);
+    animation-timing-function: cubic-bezier(1.5, 0.1, 0.01, 10.5);
+    -webkit-transform: translateY(25vh);
+    transform: translateY(-20vh);
+  }
+}
+@-webkit-keyframes xAxis3 {
+  50% {
+    z-index: 4;
+    -webkit-animation-timing-function: cubic-bezier(.3, 0.27, 0.07, 0.01);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, .01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site4.site4 {
+  z-index: 5;
+  position: static;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+height: 10%;
+display: flex;
+align-items: center;
+-webkit-animation: yAxis4 90.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.64);
+-webkit-animation: xAxis4 40.5s infinite cubic-bezier(0.9, 0.9, 20.1, 50.0);
+animation: yAxis4 60.5s infinite cubic-bezier(0.7, 6.27, 0.67, 0.1);
+animation: xAxis4 40.5s infinite cubic-bezier(.02, 0.04, 0.1, 0.1);
+}
+
+
+
+div#site4.site4::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 5;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis4 90.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.64);
+  animation: yAxis4 60.5s infinite cubic-bezier(0.7, 6.27, 0.67, 0.1);
+}
+
+div#site4.site4:hover::after {
+  background-image:url('soundcloud.png');
+  z-index: 5;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site4.site4:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis4 {
+  50% {
+    z-index: 5;
+    -webkit-animation-timing-function: cubic-bezier(0.02, 200.01, 200.21, 0.5);
+    animation-timing-function: cubic-bezier(0.02, 200.01, 200.21, 0.5);
+    -webkit-transform: translateY(-10vh);
+    transform: translateY(10vh);
+  }
+}
+@-webkit-keyframes xAxis4 {
+  50% {
+    z-index: 5;
+    -webkit-animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site5.site5 {
+  z-index: 7;
+  position: static;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transition-duration: 1s;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  -webkit-animation: yAxis5 100.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+  -webkit-animation: xAxis5 5.5s infinite cubic-bezier(40.9, 0.9, 20.1, 50.0);
+  animation: yAxis5 20.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+  animation: xAxis5 55.5s infinite cubic-bezier(.002, 0.004, 0.1, 0.1);
+}
+
+
+
+div#site5.site5::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 7;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis5 100.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+  animation: yAxis5 20.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+}
+
+div#site5.site5:hover::after {
+  background-image:url('presentation.png');
+  z-index: 7;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site5.site5:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis5 {
+  50% {
+    z-index: 7;
+    -webkit-animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    -webkit-transform: translateY(-75vh);
+    transform: translateY(25vh);
+  }
+}
+@-webkit-keyframes xAxis5 {
+  50% {
+    z-index: 7;
+    -webkit-animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site6.site6 {
+  z-index: 8;
+  position: static;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+height: 10%;
+display: flex;
+align-items: center;
+-webkit-animation: yAxis6 30.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+-webkit-animation: xAxis6 60.5s infinite cubic-bezier(40.9, 0.9, 20.1, 50.0);
+animation: yAxis6 120.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+animation: xAxis6 65.5s infinite cubic-bezier(.002, 0.004, 0.1, 0.1);
+}
+
+
+
+div#site6.site6::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 8;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis6 30.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+  animation: yAxis6 120.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+}
+
+div#site6.site6:hover::after {
+  background-image:url('draynori.png');
+  z-index: 8;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+
+}
+
+div#site6.site6:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis6 {
+  50% {
+    z-index: 8;
+    -webkit-animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    -webkit-transform: translateY(-80vh);
+    transform: translateY(-80vh);
+  }
+}
+@-webkit-keyframes xAxis6 {
+  50% {
+    z-index: 8;
+    -webkit-animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}
+
+div#site7.site7 {
+  z-index: 9;
+  position: static;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+height: 10%;
+display: flex;
+align-items: center;
+-webkit-animation: yAxis7 110.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+-webkit-animation: xAxis7 80.5s infinite cubic-bezier(40.9, 0.9, 20.1, 50.0);
+animation: yAxis7 110.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+animation: xAxis7 85.5s infinite cubic-bezier(.002, 0.004, 0.1, 0.1);
+background-color: white;
+}
+
+
+
+div#site7.site7::after {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+font-family: 'Sedgwick Ave Display', cursive;
+  background-size: cover;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border: solid black;
+  border-left-width: 2.2px;
+  border-top-width: 1.8px;
+  border-right-width: 1.5px;
+  border-bottom-width: 1.2px;
+  z-index: 9;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+  color: white;
+  text-shadow: rgb(11, 16, 18) 2px 0px 0px, rgb(11, 16, 18) 1.75517px 0.958851px 0px, rgb(11, 16, 18) 1.0806px 1.68294px 0px, rgb(11, 16, 18) 0.141474px 1.99499px 0px, rgb(11, 16, 18) -0.832294px 1.81859px 0px, rgb(11, 16, 18) -1.60229px 1.19694px 0px, rgb(11, 16, 18) -1.97998px 0.28224px 0px, rgb(11, 16, 18) -1.87291px -0.701566px 0px, rgb(11, 16, 18) -1.30729px -1.5136px 0px, rgb(11, 16, 18) -0.421592px -1.95506px 0px, rgb(11, 16, 18) 0.567324px -1.91785px 0px, rgb(11, 16, 18) 1.41734px -1.41108px 0px, rgb(11, 16, 18) 1.92034px -0.558831px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(value);
+  display: block;
+  -webkit-animation: yAxis7 110.5s infinite cubic-bezier(40.7, 0.27, 20.57, 50.64);
+  animation: yAxis7 110.5s infinite cubic-bezier(0.7, 0.27, 0.57, 0.1);
+  background-color: white;
+}
+
+div#site7.site7:hover::after {
+  background-image:url('variableTest.png');
+  z-index: 9;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: 1s;
+  transform: scale(1.2);
+  filter: contrast(150%) brightness(140%);
+}
+
+div#site7.site7:hover{
+  flex-basis:0;
+  flex-grow: 2;
+}
+
+@-webkit-keyframes yAxis7 {
+  50% {
+    z-index: 9;
+    -webkit-animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    animation-timing-function: cubic-bezier(200.02, 200.01, 200.21, 400);
+    -webkit-transform: translateY(-90vh);
+    transform: translateY(-90vh);
+  }
+}
+@-webkit-keyframes xAxis7 {
+  50% {
+    z-index: 9;
+    -webkit-animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    animation-timing-function: cubic-bezier(200.3, 100.27, 400.07, 0.01);
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+  }
+}

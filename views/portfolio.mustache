@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ethan Jarrell</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $( window ).load(function() {
+      console.log("talking");
+var pathname = window.location.pathname;
+console.log(pathname);
+
+        
+    fetch('https://api.mlab.com/api/1/databases/portfoliosite/collections/sites?&l=41000&apiKey=_ehmfqV-bs1PDWki2WNFVMsGmXGQuk77').then(function(response) {
+      if (response.status != 200) {
+        window.alert("Sorry, nothing matches those search terms.  Try another search, or use the panel on the left.");
+        return;
+      }
+
+      response.json().then(function(data) {
+
+        let api = data;
+        console.log(api);
+        let dataToUse = [];
+        for (var i = 0; i < 1; i++) {
+          if (pathname ==  "/portfolioA") {
+            dataToUse.push(api[5])
+          }
+          if (pathname == "/portfolioB") {
+            dataToUse.push(api[3])
+          }
+          if (pathname == "/portfolioC") {
+            dataToUse.push(api[4])
+          }
+          if (pathname == "/portfolioD") {
+            dataToUse.push(api[0])
+          }
+          if (pathname == "/portfolioE") {
+            dataToUse.push(api[2])
+          }
+          if (pathname == "/portfolioF") {
+            dataToUse.push(api[1])
+          }
+          if (pathname == "/portfolioG"){
+            dataToUse.push(api[6])
+          }
+        }
+        console.log(dataToUse);
+        
+        let display = `
+        <div style="width:100%;height:100%;display:flex;flex-flow:column wrap;justify-content:center;align-itemscenter">
+        <div style="height:75px;width:100%;background-color:#a9bcd6;font-size:40px;display:flex;flex-flow:row wrap;justify-content:center;align-items:center;color:white;font-weight:bold;">
+        ${dataToUse[0].name} <p style="font-size:15px;color:white;margin-left:20px;margin-top:5px;">(${dataToUse[0].type})</p>
+        </div>
+        <div style="display:flex;flex-flow:row wrap;justify-content:flex-start;align-items:flex-start;width:100%">
+        <img style="width:60%;margin-top:15px;border:solid #a9bcd6 3.5px;" src="${dataToUse[0].images[0]}" />
+        <div id="description" style="flex-basis:0;flex-grow:1;height:100%;display:flex;flex-flow:column wrap;justify-content:flex-start;margin-top:14px;align-items:flex-start;">
+        <label style="font-size:20px;width:100%;color:black;font-weight:bold;background-color:#a9bcd6;color:white;padding-left:15px;">Site Description:</label>
+        <p style="width:90%;margin-left:15px;">${dataToUse[0].description}</p>
+        <label style="font-size:20px;width:100%;color:black;font-weight:bold;background-color:#a9bcd6;color:white;padding-left:15px;">Languages & Skills Involved:</label>
+        <p style="width:90%;margin-left:15px;">${dataToUse[0].skills}</p>
+        <label style="font-size:20px;width:100%;color:black;font-weight:bold;background-color:#a9bcd6;color:white;padding-left:15px;">Check out my code:</label>
+        <a style="width:90%;margin-left:15px;" href="${dataToUse[0].code}">${dataToUse[0].code}</a>
+        <label style="font-size:20px;color:black;font-weight:bold;background-color:#a9bcd6;color:white;width:100%;padding-left:15px;margin-top:5px;">My thoughts on the project:</label>
+        <a style="border-bottom:solid 1.5px #a9bcd6;width:90%;margin-left:15px;padding-bottom:5px;" href="${dataToUse[0].blogs[0]}">${dataToUse[0].blogs[0]}</a>
+        <a style="border-bottom:solid 1.5px #a9bcd6;text-indent:10px;width:90%;margin-left:15px;padding-bottom:5px;" href="${dataToUse[0].blogs[1]}">${dataToUse[0].blogs[1]}</a>
+        <a style="width:90%;margin-left:15px;" href="${dataToUse[0].blogs[2]}">${dataToUse[0].blogs[2]}</a>
+        <label style="font-size:20px;width:100%;color:black;font-weight:bold;background-color:#a9bcd6;color:white;padding-left:15px;margin-top:10px;">Check out the site:</label>
+        <a style="width:90%;margin-left:15px;" href="${dataToUse[0].url}">${dataToUse[0].url}</a>
+        </div>
+        </div>
+        </div>
+        `
+        document.getElementById('display').innerHTML = display;
+      })
+    })
+})
+</script>
+  </head>
+  <body>
+  <div id="display"></div>
+  </body>
+</html>
